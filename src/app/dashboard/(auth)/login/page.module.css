@@ -32,3 +32,15 @@
     border-radius: 5px;
     font-size: 20px;
 }
+
+.button:hover {
+    background-color: #49b07d;
+  }
+  
+.google {
+  background-color: rgba(228, 97, 50, 0.72);
+}
+
+.google:hover {
+  background-color: rgba(228, 97, 50, 0.803);
+}
