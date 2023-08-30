@@ -22,6 +22,16 @@
     position: relative;
     background-size: cover !important;
 }
+@keyframes move {
+    from{
+
+        transform: translateY(-15px);
+    }
+    to{
+        
+        transform: translateY(0px);
+    }
+}
 
 .item:nth-child(1){
     background:url("/illustration.png");
@@ -44,6 +54,9 @@
 .item:hover .title{
     color: #53c82b;
 }
+
 .item:hover {
     border-color: #53c82b;
+    animation: move 2s ease infinite alternate;
+    width: 500px;
 }
