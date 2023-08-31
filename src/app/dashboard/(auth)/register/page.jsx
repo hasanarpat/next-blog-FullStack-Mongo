@@ -44,7 +44,7 @@ const Register = () => {
       {
         err && "Something went wrong."
       }
-    <Link href="/dashboard/login">Log in with an existing account.</Link>
+    <Link href="/dashboard/login" className={styles.link}>Log in with an existing account.</Link>
     </div>
   )
 }

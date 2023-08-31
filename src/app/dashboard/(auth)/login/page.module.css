@@ -44,3 +44,10 @@
 .google:hover {
   background-color: rgba(228, 97, 50, 0.803);
 }
+
+.link{
+  background-color: white;
+  padding: 10px 30px;
+  border-radius: 3px;
+  color: #49b07d;
+}

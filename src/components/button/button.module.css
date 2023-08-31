@@ -6,4 +6,10 @@
     border: none;
     border-radius: 5px;
     width: max-content;
+    transition: all 1s ;
+}
+
+.container:hover{
+    width: 100%;
+    font-size: 22px;
 }
