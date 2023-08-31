@@ -1,5 +1,7 @@
 .mainTitle{
     font-size: 100px;
+    color: #53c82b;
+    user-select: none;
 }
 .container{
     
@@ -7,6 +9,7 @@
 
 .selectTitle{
     margin: 20px 0px;
+    user-select: none;
 }
 
 .items{
@@ -21,6 +24,7 @@
     height: 400px;
     position: relative;
     background-size: cover !important;
+    filter: grayscale(100%);
 }
 @keyframes move {
     from{
@@ -58,5 +62,6 @@
 .item:hover {
     border-color: #53c82b;
     animation: move 2s ease infinite alternate;
-    width: 500px;
+    width: 320px;
+    filter: grayscale(0);
 }

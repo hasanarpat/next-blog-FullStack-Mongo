@@ -20,7 +20,7 @@ const About = () => {
         <div className={styles.imgText}>
           <h1 className={styles.imgTitle}>Digital Storytellers</h1>
           <h2 className={styles.imgDesc}>
-            handcrafting award winning digital experiences
+            Handcrafting - Award Winning Digital Experiences
           </h2>
         </div>
       </div>

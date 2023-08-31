@@ -5,12 +5,13 @@ import useSWR from "swr";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 const Dashboard = () => {
   const session = useSession();
 
   const router = useRouter();
-  
+
   //NEW WAY TO FETCH DATA
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -46,7 +47,7 @@ const Dashboard = () => {
         }),
       });
       mutate();
-      e.target.reset()
+      e.target.reset();
     } catch (err) {
       console.log(err);
     }
@@ -70,18 +71,25 @@ const Dashboard = () => {
           {isLoading
             ? "loading"
             : data?.map((post) => (
-                <div className={styles.post} key={post._id}>
-                  <div className={styles.imgContainer}>
-                    <Image src={post.img} alt="" width={200} height={100} />
+                <Link href={`/blog/${post._id}`} key={post._id}>
+                  <div className={styles.post}>
+                    <div className={styles.imgContainer}>
+                      <Image
+                        src={post.img}
+                        alt=""
+                        className={styles.img}
+                        fill={true}
+                      />
+                    </div>
+                    <h2 className={styles.postTitle}>{post.title}</h2>
+                    <span
+                      className={styles.delete}
+                      onClick={() => handleDelete(post._id)}
+                    >
+                      X
+                    </span>
                   </div>
-                  <h2 className={styles.postTitle}>{post.title}</h2>
-                  <span
-                    className={styles.delete}
-                    onClick={() => handleDelete(post._id)}
-                  >
-                    X
-                  </span>
-                </div>
+                </Link>
               ))}
         </div>
         <form className={styles.new} onSubmit={handleSubmit}>
